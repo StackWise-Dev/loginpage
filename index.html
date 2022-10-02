@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP | Login Form</title>
+    <style>
+        :root {
+            --back-color: #273746;
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            padding: 0px 20px;
+        }
+        .main-container {
+            width: 800px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 0px 10px #8e8e8e;
+        }
+        .main-container .left-container {
+            width: 350px;
+            height: 700px;
+            background-color: var(--back-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .main-container .left-container h1 {
+            color: #fff;
+            padding: 10px 0px;
+            letter-spacing: 1px;
+            font-size: 2.4em;
+        }
+        .main-container .left-container .center-line {
+            width: 80%;
+            background-color: #fff;
+            height: 5px;
+            margin: 0px 0px 20px 0px;
+        }
+        .main-container .left-container p {
+            color: #fff;
+            font-size: 16px;
+        }
+        .right-container {
+            width: 450px;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .facebook,
+        .gmail, 
+        .outlook {
+            width: 80%;
+            height: auto;
+            padding: 8px;
+            border: 1px solid var(--back-color);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            margin: 3px auto;
+            cursor: pointer;
+        }
+        .facebook:hover,
+        .gmail:hover, 
+        .outlook:hover {
+            box-shadow: 0px 0px 5px #8e8e8e;
+        }
+        .right-container p {
+            margin-left: 20px;
+            font-size: 16px;
+        }
+        .right-container img {
+            width: 30px;
+            height: 30px;
+            float: left;
+        }
+        .right-container .or-line {
+            width: 80%;
+            height: 2px;
+            background-color: var(--back-color);
+            margin: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .right-container .or-line::after {
+            content: "Or";
+            background-color: var(--back-color);
+            padding: 5px 10px;
+            color: #fff;
+        }
+        form {
+            width: 80%;
+            height: auto;
+        }
+        form input {
+            width: 100%;
+            height: auto;
+            font-size: 16px;
+            padding: 10px 5px;
+            margin: 3px 0px;
+            border: 1px solid var(--back-color);
+            border-radius: 5px;
+        }
+        input[type=text]:focus,
+        input[type=password]:focus {
+            outline: none;
+        }
+        input[type=submit] {
+            width: 50%;
+            height: auto;
+            display: block;
+            font-size: 16px;
+            margin: 20px auto;
+            background-color: var(--back-color);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 15px 0px;
+            transition: all 0.3s;
+        }
+        input[type=submit]:hover {
+            width: 70%;
+        }
+        .right-container .forgot {
+            margin: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #000;
+        }
+        .right-container span {
+            font-size: 16px;         
+        }
+        .right-container span a {
+            text-decoration: none;
+            color: crimson;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- THE MAIN SECTION WHICH SPLITS INTO TWO PARTS -->
+    <div class="main-container">
+        <!-- THE SIDE PANEL CONTAINS THE WELCOME PART -->
+        <div class="left-container">
+            <h1>Welcome Back</h1>
+            <div class="center-line"></div>
+            <p>Log in to continue to your account</p>
+        </div>
+        <div class="right-container">
+            <div class="facebook"><img src="images/facebook.png" alt=""><p> Continue with Facebook</p></div>
+            <div class="gmail"><img src="images/gmail.png" alt=""><p>Continue with G-mail</p></div>
+            <div class="outlook"><img src="images/outlook.png" alt=""><p>Continue with Outlook</p></div>
+            <div class="or-line"></div>
+            <form action="">
+                <input type="text" name="useremail" id="useremail" placeholder="Enter your E-mail">
+                <input type="password" name="userpassword" id="userpassword" placeholder="Enter your password">
+                <input type="submit" value="Sign In">
+            </form>
+            <a class="forgot" href="#">Forgot Password...?</a>
+            <span>Not registered yet? <a href="signup.html">Sign Up</a></span>
+        </div>
+    </div>
+
+    
+</body>
+</html>
